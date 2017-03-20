@@ -58,14 +58,15 @@ xkDatePicker.maximumYear = maxYear
 ```
 New dates will be handled automatically at runtime. Keep in mind, that maximum date should be greater than minimum date, otherwise a fatalError will be thrown.
 
-To change font color for valid and invalid dates use validDateFontColor and invalidDateFontColor properties:
+Color for valid and invalid dates use validDateFontColor and invalidDateFontColor properties (handled automatically at runtime):
 ```
 let balack = UIColor.black()
-validDateFontColor = balack
+xkDatePicker.validDateFontColor = balack
 
 let red = UIColor.red()
-invalidDateFontColor = red
+xkDatePicker.invalidDateFontColor = red
 ```
+
 
 ## Contributing
 
@@ -73,4 +74,4 @@ Feel free to contribute!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
