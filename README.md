@@ -2,6 +2,8 @@
 
 A simple date picker written in Swift, that has two wheels for year selection and an era picker. Supports Gregorian calender only by now.
 
+![alt tag](https://raw.githubusercontent.com/xankraegor/XKDatePickerView/master/picker_screen.png)
+
 Features:
 * Year, Month, Century, Subcentury and Era picker wheels
 * 'Infinite' scrolling for Year, Month, Century, Subcentury and Era
@@ -54,7 +56,16 @@ xkDatePicker.minimumYear = minYear
 let maxYear: Int = 5500
 xkDatePicker.maximumYear = maxYear
 ```
-New dates will be handled automatically. Keep in mind, that maximum date should be greater than minimum date, otherwise a fatalError will be thrown.
+New dates will be handled automatically at runtime. Keep in mind, that maximum date should be greater than minimum date, otherwise a fatalError will be thrown.
+
+To change font color for valid and invalid dates use validDateFontColor and invalidDateFontColor properties:
+```
+let balack = UIColor.black()
+validDateFontColor = balack
+
+let red = UIColor.red()
+invalidDateFontColor = red
+```
 
 ## Contributing
 
