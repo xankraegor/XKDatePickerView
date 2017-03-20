@@ -2,7 +2,7 @@
 
 A simple date picker written in Swift, that has two wheels for year selection and an era picker. Supports Gregorian calender only by now.
 
-![alt tag](https://raw.githubusercontent.com/xankraegor/XKDatePickerView/master/picker_screen.png)
+![alt tag](picker_screen.png)
 
 Features:
 * Year, Month, Century, Subcentury and Era picker wheels
@@ -73,4 +73,4 @@ Feel free to contribute!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
