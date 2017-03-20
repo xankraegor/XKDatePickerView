@@ -39,10 +39,20 @@ class XKDatePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelega
 
     // MARK: - Public properties
     public var xkDatePickerDelegate: XKDatePickerViewDelegate?
-    public var validDateFontColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    public var invalidDateFontColor: UIColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
 
-    public var maximumYear: Int = -9999 {
+    public var validDateFontColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) {
+        didSet {
+            self.layoutSubviews()
+        }
+    }
+
+    public var invalidDateFontColor: UIColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1) {
+        didSet {
+            self.layoutSubviews()
+        }
+    }
+
+    public var maximumYear: Int = 9999 {
         didSet {
             guard maximumYear > minimumYear else {
                 fatalError("maximumYear \(maximumYear) should be greater than minimumYear \(minimumYear)")
@@ -56,7 +66,7 @@ class XKDatePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelega
         }
     }
 
-    public var minimumYear: Int = 9999 {
+    public var minimumYear: Int = -9999 {
         didSet {
             guard maximumYear > minimumYear else {
                 fatalError("maximumYear \(maximumYear) should be greater than minimumYear \(minimumYear)")
@@ -191,6 +201,7 @@ class XKDatePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelega
         case Component.month: // (localized) January to December
             label = useShortMonthLabels ? DateFormatter().shortMonthSymbols[row] : DateFormatter().monthSymbols[row]
             paragraph.alignment = .center
+            attributes[NSForegroundColorAttributeName] = validDateFontColor
         case Component.century: // 0 to 60
             label = String(row)
             paragraph.alignment = .right
@@ -201,6 +212,7 @@ class XKDatePickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelega
             attributes[NSForegroundColorAttributeName] = isNewDateValid ? validDateFontColor : invalidDateFontColor
         case Component.era: // (localized) BC or AD
             label = DateFormatter().eraSymbols[row]
+            attributes[NSForegroundColorAttributeName] = validDateFontColor
         default:
             label = ""
         }

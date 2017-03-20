@@ -21,24 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5hB-m6-xtQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="631"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5hB-m6-xtQ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="479"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Y30-0T-Z8Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="68"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="62"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MF8-Vd-lRb">
-                                                <rect key="frame" x="0.0" y="0.0" width="279" height="68"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MF8-Vd-lRb">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="62"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3m-BT-JZ0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="279" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="279" height="29"/>
                                                         <state key="normal" title="Set minimum year to:"/>
                                                         <connections>
                                                             <action selector="setMinYear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xPI-hD-0C1"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkA-Z9-ClL">
-                                                        <rect key="frame" x="0.0" y="38" width="279" height="30"/>
+                                                        <rect key="frame" x="0.0" y="33" width="279" height="29"/>
                                                         <state key="normal" title="Set maximum year to:"/>
                                                         <connections>
                                                             <action selector="setMaxYear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1e-Nk-Bqe"/>
@@ -46,11 +46,11 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DIz-9v-fTP">
-                                                <rect key="frame" x="287" y="0.0" width="80" height="68"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DIz-9v-fTP">
+                                                <rect key="frame" x="287" y="0.0" width="80" height="62"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-2000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-lP-v35">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-2000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-lP-v35">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="xNM-KD-kEQ"/>
                                                         </constraints>
@@ -59,7 +59,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9q-dh-L9S">
-                                                        <rect key="frame" x="0.0" y="38" width="80" height="30"/>
+                                                        <rect key="frame" x="0.0" y="33" width="80" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="eYx-bS-ZPd"/>
                                                         </constraints>
@@ -74,23 +74,30 @@
                                             <constraint firstItem="DIz-9v-fTP" firstAttribute="leading" secondItem="MF8-Vd-lRb" secondAttribute="trailing" constant="8" id="2bh-yt-zFp"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6uf-sA-5JX">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="523"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev8-uI-8qp">
+                                        <rect key="frame" x="0.0" y="78" width="375" height="29"/>
+                                        <state key="normal" title="Randomize Colors"/>
+                                        <connections>
+                                            <action selector="randomizeColors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xqo-z7-a6u"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6uf-sA-5JX">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="356"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Date Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcD-uJ-ck7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="byg-ke-3Xn" customClass="XKDatePickerView" customModule="XKDatePickerView" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="20.5" width="375" height="300"/>
+                                                <rect key="frame" x="0.0" y="27" width="375" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="afu-ji-lgp"/>
                                                 </constraints>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6L-MT-rab">
-                                                <rect key="frame" x="0.0" y="320.5" width="375" height="202.5"/>
+                                                <rect key="frame" x="0.0" y="327" width="375" height="29"/>
                                                 <state key="normal" title="Go To Today"/>
                                                 <connections>
                                                     <action selector="setTodayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkj-EO-hng"/>
@@ -101,6 +108,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6uf-sA-5JX" secondAttribute="trailing" id="FCq-P8-yyp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ev8-uI-8qp" secondAttribute="trailing" id="Mi3-87-0qR"/>
+                                    <constraint firstItem="Ev8-uI-8qp" firstAttribute="leading" secondItem="5hB-m6-xtQ" secondAttribute="leading" id="TRp-w5-9Bl"/>
                                     <constraint firstAttribute="trailing" secondItem="Y30-0T-Z8Z" secondAttribute="trailing" constant="8" id="jlL-7y-ZnQ"/>
                                 </constraints>
                             </stackView>
@@ -110,7 +119,7 @@
                             <constraint firstItem="5hB-m6-xtQ" firstAttribute="top" secondItem="1jo-72-coQ" secondAttribute="bottom" constant="8" id="Idh-7F-A8Y"/>
                             <constraint firstItem="5hB-m6-xtQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="REf-yg-cp7"/>
                             <constraint firstAttribute="trailing" secondItem="5hB-m6-xtQ" secondAttribute="trailing" id="aK7-es-XHa"/>
-                            <constraint firstItem="4Yi-Du-oXZ" firstAttribute="top" secondItem="5hB-m6-xtQ" secondAttribute="bottom" constant="8" id="bvQ-AR-To3"/>
+                            <constraint firstItem="4Yi-Du-oXZ" firstAttribute="top" secondItem="5hB-m6-xtQ" secondAttribute="bottom" constant="160" id="bvQ-AR-To3"/>
                         </constraints>
                     </view>
                     <connections>

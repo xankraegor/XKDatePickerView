@@ -58,6 +58,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, XKDatePickerViewDe
         return true
     }
 
+    @IBAction func randomizeColors(_ sender: Any) {
+        let enabledDateFontColor = UIColor(colorLiteralRed: Float(arc4random_uniform(256)) / 255.0, green: Float(arc4random_uniform(256)) / 255.0, blue: Float(arc4random_uniform(256)) / 255.0, alpha: 1)
+        print(enabledDateFontColor)
+        let disabledDateFontColor = UIColor(colorLiteralRed: Float(arc4random_uniform(256)) / 255.0, green: Float(arc4random_uniform(256)) / 255.0, blue: Float(arc4random_uniform(256)) / 255.0, alpha: 1)
+        print(disabledDateFontColor)
+
+        xkDatePicker.validDateFontColor = enabledDateFontColor
+        xkDatePicker.invalidDateFontColor = disabledDateFontColor
+    }
 
 
 }
